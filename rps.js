@@ -12,13 +12,13 @@ let playerSelect = ( options ) => {
   if ( !options.includes( selection.toUpperCase() )) {
     // keep trying for valid; return when valid
     alert('Invalid input. Please choose from: Rock, Paper, or Scissors.');
-   return  playerSelect( options );
+    return  playerSelect( options );
   } else {
     return selection.toUpperCase();
   }
 };
 
-const OPTIONS = ['ROCK', 'PAPER', 'SCISSORS']
+const OPTIONS = ['ROCK', 'PAPER', 'SCISSORS'];
 
 let playerSelection = playerSelect ( OPTIONS );
 
