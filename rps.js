@@ -6,13 +6,24 @@ const computerPlay = ( optionsArr ) => {
   return optionsArr[ Math.floor( Math.random() * 3 ) ];
 };
 
-// use Window.prompt() to get user selection; return selection in uppercase
-let playerSelect = () => {
+// use Window.prompt() to get user selection; validate input; return selection in uppercase
+let playerSelect = ( options ) => {
   const selection = prompt("Rock, Paper, Scissor?");
-  return selection.toUpperCase() ;
+  if ( !validate( selection.toUpperCase(), options )) {
+    // keep trying for valid; return when valid
+   return  playerSelect( options );
+  } else {
+    return selection.toUpperCase();
+  }
 };
 
 // validate user input exists in array
 const validate = ( input, optionsArr ) => {
   return optionsArr.includes( input );
 }
+
+const OPTIONS = ['ROCK', 'PAPER', 'SCISSORS']
+
+let playerSelection = playerSelect ( OPTIONS );
+
+console.log( playerSelection );
