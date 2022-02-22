@@ -6,3 +6,8 @@ const computerPlay = ( optionsArr ) => {
   return optionsArr[ Math.floor( Math.random() * 3 ) ];
 };
 
+// use Window.prompt() to get user selection; return selection in uppercase
+let playerSelect = () => {
+  const selection = prompt("Rock, Paper, Scissor?");
+  return selection.toUpperCase() ;
+};
