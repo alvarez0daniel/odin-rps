@@ -18,11 +18,6 @@ let playerSelect = ( options ) => {
   }
 };
 
-// validate user input exists in array
-const validate = ( input, optionsArr ) => {
-  return optionsArr.includes( input );
-}
-
 const OPTIONS = ['ROCK', 'PAPER', 'SCISSORS']
 
 let playerSelection = playerSelect ( OPTIONS );
