@@ -1,0 +1,11 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #141212;
+  color: rgb(36, 240, 121);
+  font-family: 'Press Start 2P', cursive;
+}
