@@ -11,6 +11,7 @@ let playerSelect = ( options ) => {
   const selection = prompt("Rock, Paper, Scissor?");
   if ( !validate( selection.toUpperCase(), options )) {
     // keep trying for valid; return when valid
+    alert('Invalid input. Please choose from: Rock, Paper, or Scissors.')
    return  playerSelect( options );
   } else {
     return selection.toUpperCase();
