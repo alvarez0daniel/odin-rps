@@ -18,8 +18,27 @@ let playerSelect = ( options ) => {
   }
 };
 
-const OPTIONS = ['ROCK', 'PAPER', 'SCISSORS'];
+// return result after compare
+const playRound = (player, computer) => {
+  // if tie
+  if (player === computer) return 'TIE';
+  // if loss
+  if (player === 'ROCK' && computer === 'PAPER' ||
+      player === 'PAPER' && computer === 'SCISSORS' ||
+      player === 'SCISSORS' && computer === 'ROCK') {
+        return 'LOSS';
+      }
+  // if win
+  return 'WIN';
+};
 
-let playerSelection = playerSelect ( OPTIONS );
+// const OPTIONS = ['ROCK', 'PAPER', 'SCISSORS'];
 
-console.log( playerSelection );
+// const player = playerSelect(OPTIONS);
+// const computer = computerPlay(OPTIONS);
+
+// let result = playRound(player, computer)
+
+// console.log('player: ', player);
+// console.log('computer: ', computer);
+// console.log('result: ', result);
