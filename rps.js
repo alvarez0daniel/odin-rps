@@ -11,3 +11,8 @@ let playerSelect = () => {
   const selection = prompt("Rock, Paper, Scissor?");
   return selection.toUpperCase() ;
 };
+
+// validate user input exists in array
+const validate = ( input, optionsArr ) => {
+  return optionsArr.includes( input );
+}
