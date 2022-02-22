@@ -32,6 +32,12 @@ const playRound = (player, computer) => {
   return 'WIN';
 };
 
+// play rack, paper, scissors for set number of rounds
+const game = (rounds) => {
+  
+
+}
+
 // const OPTIONS = ['ROCK', 'PAPER', 'SCISSORS'];
 
 // const player = playerSelect(OPTIONS);
