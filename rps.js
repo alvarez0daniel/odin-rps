@@ -48,6 +48,7 @@ const game = (rounds) => {
   };
   
   for (let currentRound = 1; currentRound <= rounds; currentRound++) {
+    player.userName = prompt('What is your first name?').toUpperCase();
     player.selection = playerSelect(OPTIONS);
     computer.selection = computerPlay(OPTIONS);
 
