@@ -47,35 +47,36 @@ const game = (rounds) => {
     selection: ''
   };
   
+  player.userName = prompt('What is your first name?').toUpperCase();
+  
   for (let currentRound = 1; currentRound <= rounds; currentRound++) {
-    player.userName = prompt('What is your first name?').toUpperCase();
     player.selection = playerSelect(OPTIONS);
     computer.selection = computerPlay(OPTIONS);
 
     const RESULT = playRound(player.selection, computer.selection);
 
-    console.log('Current Round: ', currentRound)
+    console.log('Round: ', currentRound)
 
     switch (RESULT) {
       // Win: increment player score, increment round
       case 'WIN':
         player.score++;
         console.log(RESULT);
-        console.log('player: ', player.score);
-        console.log('computer: ', computer.score);
+        console.log(player.userName, ': ', player.score);
+        console.log(computer.userName, ': ', computer.score);
         break;
       
       case 'LOSS':
         computer.score++;
         console.log(RESULT);
-        console.log('player: ', player.score);
-        console.log('computer: ', computer.score);
+        console.log(player.userName, ': ', player.score);
+        console.log(computer.userName, ': ', computer.score);
         break;
         
       case 'TIE':
         console.log(RESULT);
-        console.log('player: ', player.score);
-        console.log('computer: ', computer.score);
+        console.log(player.userName, ': ', player.score);
+        console.log(computer.userName, ': ', computer.score);
 
       // this should never trigger
       default:
