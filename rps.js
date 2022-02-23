@@ -55,7 +55,7 @@ const game = (rounds) => {
 
     const RESULT = playRound(player.selection, computer.selection);
 
-    console.log('Round: ', currentRound)
+    console.log('Round: ', currentRound);
 
     switch (RESULT) {
       // Win: increment player score, increment round
@@ -84,9 +84,18 @@ const game = (rounds) => {
         alert('ERROR')
         break;
     }
-
-
   }
+  // display results
+  if (player.score === computer.score) {
+    console.log('It\'s a tie!');
+  } else {
+    if (player.score <= computer.score) {
+      console.log('Sorry ', player.userName, ' you lost!');
+    } else {
+      console.log('Congratulations ', player.userName, ' you won!');
+    }
+  }
+
 }
 
 game(5);
