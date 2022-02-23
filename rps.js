@@ -98,4 +98,5 @@ const game = (rounds) => {
 
 }
 
-game(5);
+const rounds = prompt('How many rounds would you like to play?');
+game(rounds);
