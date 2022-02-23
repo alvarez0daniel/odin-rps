@@ -99,12 +99,3 @@ const game = (rounds) => {
 }
 
 game(5);
-
-// const player = playerSelect(OPTIONS);
-// const computer = computerPlay(OPTIONS);
-
-// let result = playRound(player, computer)
-
-// console.log('player: ', player);
-// console.log('computer: ', computer);
-// console.log('result: ', result);
