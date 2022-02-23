@@ -77,6 +77,7 @@ const game = (rounds) => {
         console.log(RESULT);
         console.log(player.userName, ': ', player.score);
         console.log(computer.userName, ': ', computer.score);
+        break;
 
       // this should never trigger
       default:
