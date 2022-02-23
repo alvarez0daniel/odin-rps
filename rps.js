@@ -32,13 +32,59 @@ const playRound = (player, computer) => {
   return 'WIN';
 };
 
-// play rack, paper, scissors for set number of rounds
+// play rock, paper, scissors for set number of rounds
 const game = (rounds) => {
-  
+  const OPTIONS = ['ROCK', 'PAPER', 'SCISSORS'];
 
+  const player = {
+    score: 0, 
+    selection: ''
+  };
+  const computer = {
+    score: 0,
+    selection: ''
+  };
+  
+  for (let currentRound = 1; currentRound <= rounds; currentRound++) {
+    player.selection = playerSelect(OPTIONS);
+    computer.selection = computerPlay(OPTIONS);
+
+    const RESULT = playRound(player.selection, computer.selection);
+
+    console.log('Current Round: ', currentRound)
+
+    switch (RESULT) {
+      // Win: increment player score, increment round
+      case 'WIN':
+        player.score++;
+        console.log(RESULT);
+        console.log('player: ', player.score);
+        console.log('computer: ', computer.score);
+        break;
+      
+      case 'LOSS':
+        computer.score++;
+        console.log(RESULT);
+        console.log('player: ', player.score);
+        console.log('computer: ', computer.score);
+        break;
+        
+      case 'TIE':
+        console.log(RESULT);
+        console.log('player: ', player.score);
+        console.log('computer: ', computer.score);
+
+      // this should never trigger
+      default:
+        alert('ERROR')
+        break;
+    }
+
+
+  }
 }
 
-// const OPTIONS = ['ROCK', 'PAPER', 'SCISSORS'];
+game(5);
 
 // const player = playerSelect(OPTIONS);
 // const computer = computerPlay(OPTIONS);
