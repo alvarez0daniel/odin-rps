@@ -37,10 +37,12 @@ const game = (rounds) => {
   const OPTIONS = ['ROCK', 'PAPER', 'SCISSORS'];
 
   const player = {
+    userName: '',
     score: 0, 
     selection: ''
   };
   const computer = {
+    userName: 'Computer',
     score: 0,
     selection: ''
   };
