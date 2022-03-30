@@ -1,0 +1,111 @@
+/* global resets */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* custom props */
+:root {
+  --clr-bg-page: #282828;
+  --clr-txt-primary: #00ff66;
+  --ff-primary: "Press Start 2P", cursive;
+}
+
+/* general styles */
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--clr-bg-page);
+  color: var(--clr-txt-primary);
+  font-family: var(--ff-primary);
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.game-header-container {
+  padding: 0.5rem 1rem;
+}
+
+.game-header-container * {
+  margin-bottom: 1rem;
+}
+
+.game-header-container h1 {
+  font-size: clamp(0.5rem, 5vw, 3rem);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.game-header-container h2 {
+  font-size: clamp(1rem, 3vw, 2rem);
+  text-align: center;
+}
+
+.game-header-container p {
+  font-size: clamp(0.5rem, 3vw, 1rem);
+  text-align: center;
+  font-style: italic;
+}
+
+.scoreboard-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0.5rem 1rem;
+}
+
+.score-heading {
+  text-align: center;
+}
+
+.score {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.weapons-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 30vh;
+  padding: 0.5rem 1rem;
+}
+
+.weapon {
+  display: flex;
+  flex-basis: 150px;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1/1;
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.score-container {
+  flex-basis: 50%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding: 10px;
+}
+
+.results-container {
+  padding: 0.5rem 1rem;
+}
