@@ -89,16 +89,6 @@ body {
   padding: 0.5rem 1rem;
 }
 
-.weapon {
-  display: flex;
-  flex-basis: 150px;
-  justify-content: center;
-  align-items: center;
-  aspect-ratio: 1/1;
-  max-width: 150px;
-  max-height: 150px;
-}
-
 .score-container {
   flex-basis: 50%;
   flex-grow: 0;
