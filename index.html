@@ -4,21 +4,60 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
-    <noscript
-      >Sorry, you must have JavaScript enabled to play this game.</noscript
-    >
-    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/b1c9dc8e3b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="rps.js"></script>
+    <title>Rock Paper Scissors</title>
   </head>
   <body>
-    <script defer src="./rps.js"></script>
-    <h1 class="title--page">Rock, Paper, Scissors</h1>
-    <p>Look in the console. Play the game in there!</p>
+    <div class="page-container">
+      <section id="header">
+        <div class="game-header-container">
+          <h1>Rock Paper Scissors</h1>
+          <h2>Choose your weapon</h2>
+          <p class="subtext">First to 5 wins!</p>
+        </div>
+      </section>
+      <section>
+        <div class="weapons-container">
+          <i class="fa-solid fa-hand-back-fist fa-5x" data-weapon="rock"></i>
+          <i class="fa-solid fa-hand fa-5x" data-weapon="paper"></i>
+          <i class="fa-solid fa-hand-scissors fa-5x" data-weapon="scissors"></i>
+        </div>
+      </section>
+      <section>
+        <div class="scoreboard-container">
+          <div class="playerscore-container score-container">
+            <p class="score-heading">Player</p>
+            <p class="score" data-score="player-score">0</p>
+          </div>
+          <div class="comp-score-contanier score-container">
+            <p class="score-heading">Computer</p>
+            <p class="score" data-score="comp-score">0</p>
+          </div>
+          <div class="round-container score-container">
+            <p class="score-heading">Round</p>
+            <p class="score" data-score="round">0</p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="results-container">
+          <div class="outcome-container">
+            <p class="round-heading">Results</p>
+            <p class="outcome" data-outcome=""></p>
+          </div>
+        </div>
+      </section>
+    </div>
   </body>
 </html>
